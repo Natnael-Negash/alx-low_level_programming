@@ -18,8 +18,8 @@ while (l < n && src[l] != '\0')
 }
 while (l < n)
 {
-dest[j] = '\0';
-j++;
+dest[l] = '\0';
+l++;
 }
 return (dest);
 }
