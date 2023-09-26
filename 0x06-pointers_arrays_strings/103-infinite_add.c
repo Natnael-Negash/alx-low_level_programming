@@ -53,7 +53,7 @@ val2 = 0;
 else
 val2 = *(n2 + b)-'0';
 temp_tot = val1 + val2 + overflow;
-if (temp_tot >= 10
+if (temp_tot >= 10)
 overflow = 1;
 else
 overflow = 0;
@@ -69,4 +69,4 @@ return (0);
 *(r + digits) = '\0';
 rev_string(r);
 	return (r);
-	}
+}
