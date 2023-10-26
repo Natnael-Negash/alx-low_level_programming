@@ -1,5 +1,5 @@
 #include "main.h"
-#include <std.h>
+#include <stdio.h>
 
 /**
 * get_endianness - checks the endianness
