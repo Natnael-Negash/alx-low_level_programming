@@ -6,7 +6,7 @@
  * @n: decimal parameter
  * @index: index
  *
- * return: 1 if its worked or -1 if an error occured
+ * Return: value
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {

@@ -7,20 +7,19 @@
  * @n: parameter
  * @m: destiny
  *
- * Return: nflip
+ * Return: count
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int i, nflip = 0;
-	unsigned long int j = sizeof(unsigned long int) * 8;
+	unsigned long int xor_result = n ^ m;
+	unsigned int count = 0;
 
-	for (i = 0; i < j; i++)
+	while (xor_result != 0)
 	{
-		if ((m & 1) != (n & 1))
-			nflip += 1;
-		n = m >> 1;
-		m = m >> 1;
+		xor_result = xor_result & (xor_result - 1);
+		count++;
 	}
-	return (nflip);
+
+	return (count);
 }
 

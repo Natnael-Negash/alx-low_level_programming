@@ -2,13 +2,17 @@
 #include <stdio.h>
 
 /**
- * get_bet - returns the value of a bit at a given index
- * @n: parameter
- * @index: the index, starting from 0 of the bit you want to get.
- *
- * Return: the value of the bit at index or -1 if an error occured
- */
+* get_bit - value of a bit at a given index
+* @n: decimal parameter
+* @index: index
+* Return: val
+*/
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return ( n >> index) & 1;
+	int bits;
+
+	bits = (n >> index);
+	if (index > 32)
+		return (-1);
+	return (bits & 1);
 }
